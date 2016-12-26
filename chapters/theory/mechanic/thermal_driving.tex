@@ -1,0 +1,19 @@
+The vibrational energy of the system is non-zero, since the membrane is energetically coupled through the mechanical damping rate $\Gamma_m$ to an environment with a finite bath temperature $T_{bath} > 0$. This coupling introduces random fluctuations due to dissipation mechanisms, causing the Brownian motion of the membrane as described by the fluctuation-dissipation theorem \cite{saulson1990}. In statistical physics the Langevin equation is used to describe the Brownian motion of a point particle, so let us introduce a Langevin force $F_{th}(t)$, which is a delta correlated stationary Gaussian process with zero-mean $\langle F_{th}(t) \rangle = 0$, meaning that forces at different times are uncorrelated. The Langevin force is described by the autocorrelation function
+
+\begin{equation}
+\langle F_{th}(t) F_{th}(t + t') \rangle = 4k_BT_{bath}m_{eff}\Gamma_m\delta(t'),
+\label{eq:thermal_drive}
+\end{equation}
+\noindent
+where $\delta(t')$ is the Dirac delta function. From this it is trivial to obtain the power spectral density using equation \eqref{eq:PSD}
+
+\begin{equation}
+S_{FF}^{th}(\Omega) = \mathcal{F}[\langle F_{th}(t) F_{th}(t + t') \rangle] = 4k_BT_{bath}m_{eff}\Gamma_m.
+\end{equation}
+\noindent
+We can now replace the previously vaguely described term $\left|F_{ext}(\omega)\right|^2$ with $S_{FF}^{th}$ and obtain the following expression for the mechanical power spetral density:
+
+\begin{equation}
+S_{xx}(\Omega) = \left|\chi(\Omega)\right|^2S_{FF}^{th} = \frac{k_BT_{bath}\Gamma_m}{m_{eff}\Omega_{m}^2}\left[ \Delta^2 + (\Gamma_m/2)^2 \right]^{-1}.
+\label{eq:full_psd}
+\end{equation}

@@ -1,0 +1,43 @@
+As mentioned earlier in the classical picture section \ref{sec:clas_opt_mech}, we can supposedly cool the mechanical mode to  an arbitrary low phonon occupancy, if we neglect fluctuations of the input field and vacuum fluctuations. Introducing these fluctuations sets a theoretical lower bound to the phonon occupancy $n_{min}$ and thereby the amount of cooling one can achieve. We again write out the radiation pressure fluctuation in a similar manner as in the classical picture
+
+\begin{equation}
+\begin{split}
+\delta\hat{F}_{rad}(\Omega) & = i\hbar G^2\bar{a}^2\left( \frac{1}{-i(\Delta + \Omega) + \frac{\kappa}{2}} - \frac{1}{i(\Delta - \Omega) + \frac{\kappa}{2}} \right)\delta\hat{x}(\Omega) \\ 
+ & - \hbar G\bar{a}\frac{ \sqrt{\eta_c\kappa}\delta\hat{s}_{in} + \sqrt{(1 - \eta_c)\kappa}\delta\hat{s}_{vac}(\Omega)}{-i(\Delta + \Omega) + \frac{\kappa}{2}} \\
+ & - \hbar G\bar{a}\frac{\sqrt{\eta_c\kappa}\delta\hat{s}_{in}^\dagger + \sqrt{(1 - \eta_c)\kappa}\delta\hat{s}_{vac}^\dagger(\Omega)}{i(\Delta - \Omega) + \frac{\kappa}{2}}.
+\end{split}
+\end{equation}
+\noindent
+The first line is the previously derived dynamical backaction driven by mechanical displacement, while the rest is known as quantum backacktion due to fluctuations of the intra-cavity photon number driven by fluctuation in the input drive and quantum vacuum fluctuations. We obtain the spectrum for the radiation pressure force caused by quantum backaction
+
+\begin{equation}
+S_{FF}^{qb}(\Omega) = \frac{\hbar^2}{2x_{zpf}}\left( A_- + A_+ \right),
+\end{equation}
+\noindent
+where $A_{\pm}$ corresponds to the rates of anti-Stokes and Stokes scattering events in which phonons are annihilated or created
+
+\begin{align}
+A_- & = \frac{G^2\bar{a}^2x_{zpf}^2\kappa}{(\Delta + \Omega)^2 + \left(\frac{\kappa}{2}\right)^2} \\
+A_+ & = \frac{G^2\bar{a}^2x_{zpf}^2\kappa}{(\Delta - \Omega)^2 + \left(\frac{\kappa}{2}\right)^2}.
+\end{align}
+
+We already know the classical contribution, so we actually only have to perform the integral, where dynamical backaction has been absorbed into $\chi_{eff}$
+
+\begin{equation}
+\langle\delta\hat{x}^2\rangle \propto \int\frac{d\Omega}{2\pi} \left| \chi_{eff}(\Omega)\right|^2S_{FF}^{qb}(\Omega) = \frac{A_- + A_+}{2\Gamma_{eff}}\hbar\Omega_m,
+\end{equation}
+\noindent
+where $\langle\delta\hat{x}^2\rangle$ is equal to equation \eqref{eq:pos_fluc}, i.e. it contains a zero-point fluctuation term and $\Gamma_{eff} \propto \Gamma_{opt} \propto (A_- - A_+)$. Slightly different notation for $A_{\pm}$ was used in earlier chapters, but it can easily be rewritten to match this definition. A general cooling phonon number can be extrapolated to yield
+
+\begin{equation}
+\langle n\rangle \approx \frac{\Gamma_m}{\Gamma_{eff}}n_{bath} + n_{min},
+\label{eq:nf}
+\end{equation}
+\noindent
+where $n_{min} = \frac{A_+}{A_- - A_+}$ for significant cooling, i.e. $\Gamma_m \ll A_+ \ll A_-$. As a result of this added minimum phonon occupation number $n_{min}$ we can only reach the ground state $n < 1$ in the resolved sideband regime $\kappa \ll \Omega_m$, where it holds that
+
+\begin{equation}
+n_{min}^{res} \approx \left(\frac{\kappa}{4\Omega_m}\right)^2 \ll 1
+\end{equation}
+\noindent
+In the unresolved regime $\Omega_m \ll \kappa $ the limit is $n_{min}^{unres} \approx \frac{\kappa}{4\Omega_m} \gg 1$.

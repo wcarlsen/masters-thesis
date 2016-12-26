@@ -1,0 +1,15 @@
+Fourier series is a useful tool for representing functions for which Taylor series expansion are not possible, an example being the Dirac delta function. It states that any time-dependent process in a linear system can be expressed as a superposition of sinusodial functions, but the process must fulfil the Dirichlet conditions \parencite{riley2006}. This means that a process $f(t)$ with a periodicity $T$ can be written as:
+
+\begin{align}
+f(t) & = \sum_{n = -\infty}^\infty c_r e^{i\omega_r t} \\
+c_r & = \frac{1}{T}\int_{-T/2}^{T/2}dtf(t)e^{-i\omega_r t},
+\end{align}
+\noindent
+with $\omega_r = 2\pi r/T$. The above treatment can be generalized to the Fourier integral transform by taking the limit $T \to \infty$ in the Fourier series expansion above. This gives the following definition of the Fourier transform $\mathcal{F}$ and its inverse $\mathcal{F}^{-1}$:
+
+\begin{align}
+\mathcal{F}[f(t)] & \equiv f(\omega) = \int_{-\infty}^{\infty}dtf(t)e^{-i\omega t} \\
+\mathcal{F}^{-1}[f(\omega)] & \equiv x(t) =\frac{1}{2\pi} \int_{-\infty}^{\infty}d\omega f(\omega)e^{i\omega t},
+\end{align}
+\noindent
+the only requirement being that $\int_{-\infty}^{\infty}dt\left|f(t)\right|$ is finite.

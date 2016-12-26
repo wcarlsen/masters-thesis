@@ -1,0 +1,24 @@
+Let us consider a random fluctuating function $x_n(t) \in \Re$, for example be a Johnson noise voltage generated in a resistor at a finite temperature, which is connected in parallel with a capacitor \cite{davenportroot}. Or consider the movement of our membrane caused by Brownian motion due to its finite temperature. Both of theses cases are stationary processes, meaning that $x_n(t)$ and $x_n(t + \tau)$, separated by a small time-shift $\tau$, have the same statistical properties. An important statistical measure is the autocorrelation:
+
+\begin{equation}
+\langle x_n(t)x_n(t + \tau)\rangle = \lim_{T \to \infty}\int_{-T/2}^{T/2}dt~x_n(t)x_n(t + \tau).
+\end{equation}
+\noindent
+The Fourier transform of the autocorrelation of $x_n(t)$ is called the double-sided power spectral density
+
+\begin{equation}
+S_{xx}(\omega) = \int_{-\infty}^{\infty}d\tau\langle x_n(t)x_n(t + \tau)\rangle e^{-i\omega \tau} = \left|\mathcal{F}[x(t)]\right|^2,
+\label{eq:PSD}
+\end{equation}
+\noindent
+which is a consequence of the Wiener-Khinchin theorem \cite{riley2006}, stating that the autocorrelation of a stationary random process has a spectral decomposition given by the power spectrum of that same process. The variance of x(t) can be shown to be
+\begin{equation}
+\langle x_n(t)^2 \rangle = \frac{1}{2\pi}\int_{-\infty}^{\infty}d\omega~S_{xx}(\omega).
+\label{eq:inverse_ft}
+\end{equation}
+\noindent
+Since $x_n(t)$ is assumed real, it can be shown that $S_{xx}(\omega) = S_{xx}(-\omega)$. This property is used in defining the single-sided power spectral density
+
+\begin{equation}
+S_x(\omega) \equiv 2S_{xx}(\omega).
+\end{equation}

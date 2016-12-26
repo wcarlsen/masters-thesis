@@ -1,0 +1,35 @@
+Cavities plays an important role in cavity optomechanics and we therefore need to expand our knowledge about them. The intention of this chapter is to introduce the building blocks for basic cavity theory. We shall only consider the Fabry-Perot geometry of a cavity, which consist of two opposing mirrors, normally introduced in textbooks as the Fabry-Perot etalon \cite{milonni2010}.
+
+A cavity has several longitudinal resonances for which the angular frequency $\omega_n$ given by
+
+\begin{equation}
+\omega_n = 2\pi\cdot n\frac{c}{2L}, 
+\end{equation}
+\noindent
+where $n$ is an integer mode number, $L$ is the cavity length and $c$ is the speed of light. The frequency spacing between two longitudinal modes is an important measure and is denoted as the free spectral range ($\mathrm{FSR}$) of the cavity, sometimes also written as $\omega_{\mathrm{FSR}}$ when given in angular frequency. It holds that
+
+\begin{equation}
+\omega_{\mathrm{FSR}} = 2\pi FSR  = \omega_{n+1} - \omega_n = 2\pi\frac{c}{2L}.
+\end{equation}
+
+Due to the finite properties of the mirrors such as reflectivities, transmittivities, internal absorption or scattering, cavities have a characteristic decay rate denoted $\kappa$. This leads us to the a second  useful quantity: the optical finesse $\mathcal{F}$, which is the average number of round-trips completed by a photon before departing from the cavity
+
+\begin{equation}
+\mathcal{F} = \frac{\omega_{FSR}}{\kappa}.
+\end{equation}
+\noindent
+Finesse greater than one leads to an enhancement of the circulating intra-cavity power from the drive power. We have plotted the transmission through a Fabry-Perot cavity for multiple finesses in figure \ref{fig:trans_curve_finesse}. Achieving high finesse can be done by using mirrors with low losses and high reflectivities at the wanted wavelength. Cavity losses can generally be categorised by useful/good and bad losses. Input and output coupling typically being useful losses and the bad losses being internal loss, e.g. absorption or scattering. We therefore write
+
+\begin{equation}
+\kappa = \kappa_{ex} + \kappa_{0},
+\end{equation}
+\noindent
+$\kappa_{ex}$ is the loss rate associated with input coupling and $\kappa_0$ is the sum of all remaining losses. Note that one could easily distinguish between more channels of decays, but for now this will do. We define a cavity coupling parameter $\eta_c$ like so
+
+\begin{equation}
+\eta_c = \frac{\kappa_{ex}}{\kappa}.
+\end{equation}
+
+There are in general three different cavity coupling regimes for cavities\footnote{The two others being: (1) undercoupled ($\kappa_0 > \kappa_{ex} \rightarrow \eta_c < \frac{1}{2}$) and (2) overcoupled ($\kappa_0 < \kappa_{ex} \rightarrow \eta_c > \frac{1}{2}$ )} \cite{schliesser2009}, but we will mainly use critical coupling ($\kappa_0 = \kappa_{ex} \rightarrow \eta_c = \frac{1}{2}$), since it is optimal for our application.
+%A plot of cavity transmission of the different coupling regimes is shown in figure \ref{fig:trans_curve_reflections}.
+%If only detecting in reflection the output coupling would be moved to $\kappa_0$.

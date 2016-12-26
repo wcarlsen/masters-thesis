@@ -1,0 +1,65 @@
+We want to obtain the quantum Heisenberg-Langevin equations \cite{gardiner2004} of the system. These equations are probably the most useful set of equations in this field of study. From them you can derive most physics optomechanical systems possess, at least for stuff like we do. We realize that the classical approach pressented in chapter \ref{sec:clas_opt_mech} is not far from the quantum picture, and is basically only missing an introduction of quantum vacuum fluctuations $\delta\hat{s}_{vac}(t)$. In the frame rotating at the laser frequency $\omega_l$ and with a detuning $\Delta = \omega_l - \omega_c$ we obtain the time evolution of the operators of interest \cite{schliesser2009, weis2010}
+
+\begin{align}
+\dot{\hat{a}}(t) & = \left( i\Delta - \frac{\kappa}{2} -iG\hat{x}(t) \right)\hat{a}(t) + \sqrt{\eta_c\kappa}\hat{s}_{in}(t) + \sqrt{(1 - \eta_c)\kappa}\delta\hat{s}_{vac}(t) \label{eq:h_lan1} \\
+\dot{\hat{x}}(t) & = \frac{\hat{p}(t)}{m_{eff}} \label{eq:h_lan2} \\
+\dot{\hat{p}}(t) & = -m_{eff}\Omega_m^2\hat{x}(t) - \hbar G\hat{a}^\dagger(t)\hat{a}(t) - \Gamma_m\hat{p}(t) + \delta\hat{F_{th}} \label{eq:h_lan3}
+\end{align}
+\noindent
+where $\hat{s}_{in}(t) = \bar{s}_{in} + \delta\hat{s}_{in}(t)$ and $\bar{s}_{in}$ is a mean offset with a fluctuating noise perturbation $\delta\hat{s}_{in}(t)$. The noise terms in the system are $\delta\hat{s}_{in}$, $\delta\hat{s}_{vac}$ and $\delta\hat{F_{th}}$. The commutation relations and auto-correlations fulfill \cite{giovannetti2001}
+
+\begin{align}
+[\delta\hat{s}_{in}(t), \delta\hat{s}_{in}^\dagger(t')] & = [\delta\hat{s}_{vac}(t), \delta\hat{s}_{vac}^\dagger(t')] = \delta(t - t') \\
+\langle \delta\hat{s}_{in}(t)\delta\hat{s}_{in}^\dagger(t') \rangle & = \langle \delta\hat{s}_{vac}(t)\delta\hat{s}_{vac}^\dagger(t') \rangle = \delta(t - t')
+\end{align}
+\noindent
+We have here assumed zero thermal excitation of the optical mode, because optical frequencies are so high. Describing the correlation of the mechanical degree of freedom, which if undergoing Brownian motion has the autocorrelation \cite{gardiner2004}
+
+\begin{equation}
+\langle \delta\hat{F_{th}}(t)\delta\hat{F_{th}}(t') \rangle = \hbar m_{eff}\Gamma_m\int\frac{d\Omega}{2\pi} e^{-i\Omega(t - t')}\Omega\left( \coth\left( \frac{\hbar\Omega}{2k_bT} \right) + 1\right)
+\end{equation}
+\noindent
+If we take the classical limit $\Omega\hbar \ll k_bT$ the equation above reduces to $\int\frac{d\Omega}{2\pi}m_{eff}\Gamma_mk_bTe^{-i\Omega(t - t')}$, which is similar to derived in equation \eqref{eq:thermal_drive}.
+
+As shown in the classical picture we can simplify the equations of motion or in this case the quantum Heisenberg-Langevin equations of our system by considering the static and dynamical effects separately. We perform the unitary transformations $\hat{a}(t) = \bar{a} + \delta\hat{a}(t)$ and $\hat{x}(t) = \bar{x} + \delta\hat{x}(t)$, where the average of the fluctuating parts is zero $\langle \delta\hat{a}(t) \rangle = 0$ and $\langle \delta\hat{x}(t) \rangle = 0$. The static/steady state solution, i.e. $d/dt \rightarrow 0$, must fulfill
+
+\begin{align}
+\bar{a} & = \frac{\sqrt{\eta_c\kappa}\bar{s}_{in}}{-i(\Delta - G\bar{x}) + \frac{\kappa}{2}} \label{eq:ss_a} \\
+\bar{x} & = \frac{-\hbar G \bar{a}^2}{m_{eff}\Omega_m^2}
+\label{eq:ss_x}
+\end{align}
+\noindent
+where $a$ is assumed to be real and positive. This system can give rise to a bistability for sufficiently strong drive fields \cite{weis2010, schliesser2009}. The bistability is a static classical effect. Letting $\hat{s}_{in}(t) = \bar{s}_{in} + \delta\hat{s}_{in}(t)$ and choosing the phase of the input field $\bar{s}_{in}$ such that $\bar{a}$ is real and positive, and assuming strong coherent drive ($1 \ll \bar{a}$), we get the linearized quantum Heisenberg-Langevin equations for the fluctuations. We again drop higher order terms like in the classical derivation. The linearized equations not surprisingly take the following form
+
+\begin{align}
+\delta\dot{\hat{a}}(t) & = \left( i\bar{\Delta} - \frac{\kappa}{2} \right)\delta\hat{a}(t) - iG\bar{a}\delta\hat{x}(t) + \sqrt{\eta_c\kappa}\delta\hat{s}_{in}(t) + \sqrt{(1 - \eta)\kappa}\delta\hat{s}_{vac}(t) \\
+\delta\dot{\hat{a}}^\dagger(t) & = \left( -i\bar{\Delta} - \frac{\kappa}{2} \right)\delta\hat{a}^\dagger(t) + iG\bar{a}\delta\hat{x}(t) + \sqrt{\eta_c\kappa}\delta\hat{s}^\dagger_{in}(t) + \sqrt{(1 - \eta)\kappa}\delta\hat{s}^\dagger_{vac}(t),
+\end{align}
+\noindent
+remember that $\bar{\Delta}$ is a new modified detuning, $\bar{\Delta} = \Delta -G\bar{x}$, see equation \eqref{eq:a_fluc}.
+
+\begin{equation}
+\delta\ddot{\hat{x}}(t) + \Gamma_m\delta\dot{\hat{x}}(t) + \Omega_m^2\delta\hat{x}(t) = \frac{1}{m_{eff}}\left( -\hbar G\bar{a}(\delta\hat{a}(t) + \delta\hat{a}^\dagger(t)) + \delta\hat{F}_{th}(t) \right)
+\end{equation}
+\noindent
+We have used the property that $\delta\hat{x}(t) = \delta\hat{x}^\dagger(t)$. We solve these equations in the Fourier domain
+
+\begin{align}
+\delta\hat{a}(\Omega) & = \frac{-iG\bar{a}\delta\hat{x}(\Omega) + \sqrt{\eta_c\kappa}\delta\hat{s}_{in} + \sqrt{(1 - \eta_c)\kappa}\delta\hat{s}_{vac}(\Omega)}{-i(\bar{\Delta} + \Omega) + \frac{\kappa}{2}} \label{eq:da}\\
+\delta\hat{a}^\dagger(\Omega) & = \frac{-iG\bar{a}\delta\hat{x}(\Omega) + \sqrt{\eta_c\kappa}\delta\hat{s}_{in}^\dagger + \sqrt{(1 - \eta_c)\kappa}\delta\hat{s}_{vac}^\dagger(\Omega)}{i(\bar{\Delta} - \Omega) + \frac{\kappa}{2}} \label{eq:dad} \\
+\delta\hat{x}(\Omega) & = \frac{\left( -\hbar G\bar{a}(\delta\hat{a}(\Omega) + \delta\hat{a}^\dagger(\Omega)) + \delta\hat{F}_{th}(\Omega) \right)}{m_{eff}(\Omega_m^2 - \Omega^2 - i\Gamma_m\Omega)} \label{eq:dx}.
+\end{align}
+\noindent
+The autocorrelation functions in frequency domain are
+
+\begin{equation}
+\langle \delta\hat{s}_{in}(\Omega)\delta\hat{s}_{in}^\dagger(\Omega') \rangle = \langle \delta\hat{s}_{vac}(\Omega)\delta\hat{s}_{vac}^\dagger(\Omega') \rangle = 2\pi\delta(\Omega - \Omega')
+\end{equation}
+\noindent
+and
+
+\begin{equation}
+\langle \delta\hat{F_{th}}(\Omega)\delta\hat{F_{th}}(\Omega') \rangle = 2\pi\delta(\Omega - \Omega')\hbar m_{eff}\Gamma_m\Omega\left( \coth\left( \frac{\hbar\Omega}{2k_bT} \right) + 1\right),
+\end{equation}
+\noindent
+these are the only non-zero correlators of the input noises.

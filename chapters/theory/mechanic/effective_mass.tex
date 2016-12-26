@@ -1,0 +1,24 @@
+In most treatments of optomechanical systems, the mechanical resonator is treated as a one-dimensional harmonic oscillators. However, the square membrane is in reality a three-dimensional object, but assumed two-dimensional as mentioned in the previous section. Introducing an effective mass is a convenient way of mapping the quasi two-dimensional harmonic oscillator onto a one-dimensional. The concept is fairly simple; not all of the membrane is moving in the same way. If we for example compare the displacement of a point on the anti-node with that of a node, they do not travel the same distance over time or at the same velocities. For a membrane this mass reduction can be found by comparing the one-dimensional mean kinetic or potential energy with the same in two-dimensions. The mean potential energy of a one-dimensional harmonic oscillator is $\langle E_{pot} \rangle = m\Omega_{m}^2\langle x(t)^2 \rangle$. For a two-dimensional membrane resonator we calculate the mean potential energy by integrating all the potential energies of all infinitesimal mass elements $\rho h dS$, weighted with $w(u,v,t)$ from equation \eqref{eq:modeshape}, where $dS = dudv$ is the infinitesimal surface element
+
+\begin{equation}
+\begin{split}
+\langle E_{pot} \rangle & = \rho h \Omega_{m,n}^2 \int_S dS w(u,v,t)^2 \\
+ & = \rho h \Omega_{m,n}^2 \langle T(t)^2 \rangle \int_0^l \sin^2(k_m u) du \int_0^l \sin^2(k_n v) dv.
+\end{split}
+\end{equation}
+\noindent
+Each integral yields a factor of $l/2$ due to the boundary conditions introduced previously. The potential energy for the membrane harmonic oscillator is
+
+\begin{equation}
+\langle E_{pot} \rangle = \frac{\rho h l^2 \Omega_{m,n}^2}{4} \langle T(t)^2 \rangle,
+\end{equation}
+\noindent
+where $\rho hl^2 = m$. We define an effective mass 
+
+\begin{equation}
+m_{eff} \equiv \frac{m}{4},
+\end{equation}
+\noindent
+which in comparison translates into a point mass one fourth of the original mass placed on an anti-node. Should the point mass move away from the anti-node it would correspond to an increase in effective mass. It is not a general result that the effective mass is independent of mode number, but a consequence of the spacial geometry of a square membrane. This is for example not true for a circular membrane (see \cite{Wilson2011}). Using the membrane properties from table \ref{tab:memprop} we get an effective mass of $m_{eff} \approx 10.5$ \SI{}{\nano\gram}.
+%
+%The laser spot is not just a point on the membrane but has a finite area coverage, but if the spot size is much smaller than the membrane wavelength, we do not have to worry about the overlap integral between the spot size and mechanical mode shapes.

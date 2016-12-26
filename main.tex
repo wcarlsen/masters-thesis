@@ -1,0 +1,191 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[a4paper,width=150mm,top=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyhead[RO,LE]%{\chaptername}
+%\fancyfoot{}
+%\fancyfoot[LE,RO]{\thepage}
+%\fancyfoot[LO,CE]{Chapter \thechapter} %leftmark or \rightmark
+%\fancyfoot[CO,RE]{Willi Carlsen}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage[backend=biber]{biblatex} %style=authoryear
+\addbibresource{references.bib}
+\usepackage{hyperref}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{siunitx}
+
+\usepackage[version=3]{mhchem}
+
+\usepackage{booktabs}
+
+\title{
+    {Cryogenic cavity optomechanics with ultrahigh-Q membrane resonators}\\
+    {\large Niels Bohr Institute}\\
+    {\includegraphics[scale=0.25]{uni_logo.pdf}}
+}
+\author{Willi Carlsen\\ \\
+Supervisor: Eugene S. Polzik}
+\date{August 2015}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Abstract}
+\input{chapters/abstract}
+
+\chapter*{Acknowledgment}
+\input{chapters/acknowledgement}
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{chapters/introduction}
+
+\chapter{Theory}
+
+\section{Membrane resonators}
+
+\subsection{Vibrational modes} \label{sec:vib_modes}
+\input{chapters/theory/mechanic/vibrational_modes}
+
+\subsection{Effective mass} \label{sec:eff_mass}
+\input{chapters/theory/mechanic/effective_mass}
+
+\subsection{Fourier series and transform}
+\input{chapters/theory/mechanic/fourier}
+
+\subsection{Power spectral density}
+\input{chapters/theory/mechanic/PSD}
+
+\subsection{One-dimensional damped harmonic oscillator} \label{sec:1D_ho}
+\input{chapters/theory/mechanic/1D_harmonic_osc}
+
+\subsection{Thermal driving force}
+\input{chapters/theory/mechanic/thermal_driving}
+
+\subsection{Root mean square displacement} \label{sec:xrms}
+\input{chapters/theory/mechanic/RMS_displacement}
+
+\subsection{Zero-point fluctuation}
+\input{chapters/theory/mechanic/zero-point_fluctuation}
+
+\subsection{Quality factor}
+\input{chapters/theory/mechanic/dissipation}
+
+\subsection{Phononic bandgap} \label{sec:bandgap}
+\input{chapters/theory/mechanic/phononic_bandgap}
+
+\section{Cavity optomechanics}
+
+\subsection{Optical cavity} \label{sec:opt_cav}
+\input{chapters/theory/optics/optical_cavity}
+
+\subsection{Cavity equations of motion} \label{sec:cav_eom}
+\input{chapters/theory/optics/cavity_eom}
+
+\subsection{Intra-cavity power}
+\input{chapters/theory/optics/solving_cavity_eom}
+
+\subsection{Cavity with moving boundary condition}
+\input{chapters/theory/optics/cavity_moving_boundary}
+
+\subsection{Classical cavity optomechanics} \label{sec:clas_opt_mech}
+\input{chapters/theory/optics/class_optomechanical_model}
+
+\subsection{Sideband regimes}
+\input{chapters/theory/optics/sideband}
+
+\subsection{Optical properties of the membrane}
+\input{chapters/theory/optics/mem_opt_prop}
+
+\subsection{Membrane-in-the-middle system}
+\input{chapters/theory/optics/mim}
+
+\subsection{Transfer matrix model} \label{sec:trans_matrix}
+\input{chapters/theory/optics/transfer_matrix}
+
+\subsection{Hamiltonian formulation}
+\input{chapters/theory/optics/hamiltonian}
+
+\subsection{Heisenberg-Langevin approach}
+\input{chapters/theory/optics/langevin}
+
+\subsection{Limitation of dynamical backaction cooling}
+\input{chapters/theory/optics/cooling}
+
+\subsection{Optomechanical induced transparency}
+\input{chapters/theory/optics/omit}
+
+\chapter{Experimental setups and procedures}
+
+\section{Optical setup}
+\input{chapters/setup/design}
+
+\section{Mirrors}
+\input{chapters/setup/mirrors}
+
+\section{Bare cavity characterization}
+\input{chapters/setup/cavity}
+
+\section{Sample}
+\input{chapters/setup/sample}
+
+\section{Sample holder}
+\input{chapters/setup/sample_holder}
+
+\section{MIM assembly procedure}
+\input{chapters/setup/assemble_procedure}
+
+\section{Cryostat}
+\input{chapters/setup/cryogenics}
+
+\chapter{Experiment and results}
+
+\section{Sideband cooling}
+\input{chapters/experiments/cooling}
+
+\subsection{Mechanical ringdown measurement} \label{sec:q_fact}
+\input{chapters/experiments/q}
+
+\subsection{Characterization of the MIM system} \label{sec:char_mim}
+\input{chapters/experiments/mim}
+
+\subsection{Optomechanical induced transparency} \label{sec:exp_omit}
+\input{chapters/experiments/omit}
+
+\subsection{Spectrum} \label{sec:ex_spec}
+\input{chapters/experiments/spectra}
+
+\chapter{Concluding remarks and outlook}
+\input{chapters/conclusion}
+
+\chapter{Additional projects}
+\input{chapters/additional}
+
+\appendix
+\chapter{Bare cavity free spectral range} \label{sec:bare_fsr}
+\input{chapters/appendix/bare_cav_fsr}
+
+\chapter{Relative intensity noise of the laser} \label{sec:rin}
+\input{chapters/appendix/laser_rin}
+
+\listoffigures
+
+\listoftables
+
+\printbibliography
+
+\end{document}

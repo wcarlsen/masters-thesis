@@ -1,0 +1,22 @@
+Obtaining the cavity equation of motion is in it self valuable, but let us try to solve it and thereby get an expression relating the circulating intra-cavity power to the measured output power. To this end we will concentrate our effort on the transmission through the cavity.
+
+We solve the cavity equation of motion \eqref{eq:cavity_eom} by taking its Fourier transform
+
+\begin{equation}
+a(\Omega) = \frac{\sqrt{\kappa_1}E_{in}(\Omega)}{\frac{\kappa}{2} + i(\Delta - \Omega)},
+\end{equation}
+\noindent
+where $\Omega$ is an offset from the ``reference" frequency $\omega_L$. The solution is clearly dependent of its angular Fourier frequency component $\Omega$. If we consider the special case where our input field is just a constant, or in other words a monochromatic input field with frequency $\omega_L$, we can now write the input field as a constant and a delta function $E_{in} = E_0\delta(\Omega)$, where $\delta(\Omega)$ is the delta function. This means that the mean value of the rest of fields become just constants
+
+\begin{equation}
+\langle E_{in} \rangle = \frac{1}{2\pi}\int_{-\infty}^{\infty}d\Omega~E_0\delta(\Omega) = E_0.
+\end{equation}
+\noindent
+It is of special interest to know the mean circulating intra-cavity power as a function of measured input or output power. This can now more or less easily obtained the circulating power by using the relation $\left| a \right|^2/T_{rt} = P_{circ}$
+
+\begin{equation}
+\langle P_{circ} \rangle = \frac{c}{2L} \left| a \right|^2 = \frac{\mathcal{F}\kappa}{2\pi\kappa_2}\langle P_{trans} \rangle,
+\label{eq:cav_circ_pwr}
+\end{equation}
+\noindent
+where is $\langle P_{trans} \rangle = \frac{4\kappa_1\kappa_2}{\kappa^2}\frac{1}{1 + \left(\frac{2\Delta}{\kappa}\right)^2}\langle P_{in} \rangle$. The mean circulating intra-cavity power is directly proportianal to the cavity finesse $\mathcal{F}$. To achieve high intra-cavity powers we must aim for as high finesse as possible, since optomechanical effect depend strongly on power.

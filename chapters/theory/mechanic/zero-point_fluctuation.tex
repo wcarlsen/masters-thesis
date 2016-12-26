@@ -1,0 +1,50 @@
+From the quantum mechanical treatment of the one-dimensional harmonic oscillator from chapter \ref{sec:1D_ho}, we have the following Hamiltonian \cite{aspelmeyer2014, griffiths2005}
+
+\begin{equation}
+\hat{H}_{mech} = \hbar\Omega_{m}\left(\hat{b}^{\dagger}\hat{b} + \frac{1}{2}\right),
+\label{eq:ham_mech}
+\end{equation}
+\noindent
+here $\hat{b}^{\dagger}$ is the phononic creation operator and $\hat{b}$ the annihilation operator. These operators have been introduced with the position operator $\hat{x}$ and momentum operator $\hat{p}$
+
+\begin{equation}
+\hat{x} = \sqrt{\frac{\hbar}{2m_{eff}\Omega_{m}}}(\hat{b}^{\dagger} + \hat{b})
+\label{eq:qm_pos}
+\end{equation}
+
+\begin{equation}
+\hat{p} = i\sqrt{\frac{\hbar m_{eff}\Omega_{m}}{2}}(\hat{b}^{\dagger} - \hat{b}).
+\label{eq:qm_mom}
+\end{equation}
+
+
+We are interested in the root mean square value $\sqrt{\langle \hat{x}^2 \rangle}$. We note that the expectation value of $\hat{x}$ is zero, but then square should give a nonzero value since it contains product of $\hat{b}^{\dagger}$ and $\hat{b}$. The commutator relation between the annihilation operator and the creation operator is $\left[ \hat{b}, \hat{b}^{\dagger} \right] = 1$ and $\hat{b}^{\dagger}\hat{b} = \hat{n}$, where $\hat{n}$ is phonon occupation number. The root mean square then equals
+
+\begin{equation}
+\langle \hat{x}^2 \rangle = \frac{\hbar}{2m_{eff}\Omega_{m}}(2\langle\hat{n}\rangle + 1).
+\label{eq:pos_fluc}
+\end{equation}
+\noindent
+If the mean phonon occupation number is zero, we obtain the following expression for the zero-point fluctuation
+
+\begin{equation}
+x_{zpf} \equiv \sqrt{\frac{\hbar}{2m_{eff}\Omega_{m}}}.
+\label{eq:xzpf}
+\end{equation}
+
+This means that even in the ground state, i.e. ($\langle \hat{n} \rangle = 0$) the membrane will still have a non-zero displacement due to quantum fluctuations (see table \ref{tab:zpf_fluctuation} for an estimate of the magnitude of the fluctuations).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+\toprule
+$\hbar$ & Reduced Planck constant & \SI{1.1e-34}{\square\meter\kilogram\per\second} \\
+$\Omega_{1,1}$ & Angular frequency & \SI[product-units=single]{2\pi x 732.0e3}{\radian\per\second} \\
+$m_{eff}$ & Effective mass & \SI{10.5}{\nano\gram} \\
+\midrule
+$x_{zpf}$ & Zero-point fluctuation & \SI{1.1}{\femto\meter} \\
+\bottomrule
+\end{tabular}
+\caption{Membrane properties and estimated zero-point fluctuation for the fundamental mechanical mode.}
+\label{tab:zpf_fluctuation}
+\end{table}

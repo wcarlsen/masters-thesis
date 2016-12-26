@@ -1,0 +1,130 @@
+\subsubsection{Radiation pressure force}
+We now wish to couple the movable mirror motion to the amplitude of the intra-cavity field. The coupling is mediated by a radiation pressure force $F_{rad}$ experienced by the movable mirror. A single reflected photon transfers the momentum onto a mirror
+
+\begin{equation}
+\Delta p = \frac{2h}{\lambda},
+\end{equation}
+\noindent
+where $h$ Planck's unreduced constant and $\lambda$ the photon wavelength. Our radiation pressure force of $n$ number photons inside a cavity $F_{rad}$ can then be written as
+
+\begin{equation}
+F_{rad} = \frac{\Delta p}{T_{rt}}n = \frac{2\hbar k}{T_{rt}}n = \frac{U_{circ}}{L} = \frac{2P_{circ}}{c},
+\label{eq:rad_force}
+\end{equation}
+\noindent
+where $T_{rt}$ again is the round trip time. We assume to be in vacuum such that the phase velocity is equal to $c$.% and the energy $U_{circ} = \frac{\hbar k n}{c}$.
+
+The dynamics of a system that couples an optical field with a mechanical degree of freedom depends critically on the optical frequency shift per displacement, namely $G$. Initially it might not be apparent from equation \eqref{eq:rad_force}, but rewriting the radiation pressure force in terms of work done on the cavity by a small displacement $x$
+
+\begin{equation}
+F_{rad} = -\frac{d U_{mech}}{dx} = \frac{d U_{circ}}{dx},
+\label{eq:rad_force_work}
+\end{equation}
+\noindent
+where $U_{mech}$ is the mechanical energy. Note that the cavity length now at any particular time is $L + x$. Applying the chain rule to equation \eqref{eq:rad_force_work},
+
+\begin{equation}
+\frac{d U_{circ}}{dx} = \frac{d U_{circ}}{dL}\frac{d L}{d\omega_c}\frac{d\omega_c}{dx}.
+\end{equation}
+\noindent
+One can argue that $\frac{d U_{circ}}{dL} = \frac{U_{circ}}{L}$, $\frac{dL}{d\omega_c} = \frac{-\pi c}{\omega_c^2}$ and we previously defined $G = \frac{d\omega_c}{dx}$. We can now see the direct relation between radition pressure force and $G$
+
+\begin{equation}
+F_{rad} = -G\frac{U_{circ}}{\omega_c}.
+\end{equation}
+\noindent
+Our modified equations of motion for the cavity field and mechanics become
+
+\begin{equation}
+\dot{a}(t) = -\left( + \frac{\kappa}{2} + i(\Delta - Gx(t)) \right)a(t) + \sqrt{\kappa_1}E_{in},
+\end{equation}
+\noindent
+and
+\begin{equation}
+\frac{1}{m}\left( F_{th}(t) + F_{rad} \right) =\ddot{x}(t) + \Gamma_m\dot{x}(t) + \Omega_m^2x(t).
+\end{equation}
+\noindent
+The equations of motion for the cavity field and mirror motion are coupled through $F_{rad}$ with $U_{circ} = \left| a(t) \right|^2$ see section \ref{sec:cav_eom}.
+
+\subsubsection{Dynamical backaction: Optical spring and damping}
+We can approximate a solution by adding a small perturbation to each variable around their steady-state, e.g. $x(t) =  \langle x \rangle + \delta x(t)$. This is done for each of the variables except for the input field, since it is a monochromatic laser field that has no time dependent small variation i.e. $\delta E_{in}(t) = 0$. That means that we neglect quantum noise. We assume that the cavity resonance is only changed by a small fraction of the cavity linewidth, like so $\frac{G\delta x}{\kappa} \ll 1$, which means that the small perturbation assumption also holds for the intra-cavity field. Our linearized coupled equations of motion to first order ($\delta a/\langle a \rangle$ and $\delta x/\langle x \rangle$) become
+
+\begin{align}
+\delta \dot{a}(t) = -\left(\frac{\kappa}{2} + i\bar{\Delta}\right)\delta a(t) - iG\delta x(t)\langle a \rangle \label{eq:a_fluc} \\
+\frac{1}{m}\left( \delta F_{th}(t) + \delta F_{rad}(t) \right) = \delta \ddot{x}(t) + \Gamma_m\delta\dot{x}(t) + \Omega_m^2x(t) \label{eq:x_fluc},
+\end{align}
+\noindent
+where $\bar{\Delta} = \omega_L - \omega_c -G\langle x \rangle$ is a new modified detuning.
+
+Let us take a closer look at the fluctuating part of the radiation pressure force. To first order in $\delta a(t)$, i.e. omitting $\langle F_{rad}\rangle$ and remembering that the intra-cavity field amplitude $a(t)$ is a complex number
+
+\begin{equation}
+\delta F_{rad} = F_{rad} - \langle F_{rad}\rangle = - \frac{G}{\omega_c}\left( \langle a \rangle \delta a^*(t) + \delta a(t) \langle a \rangle^* \right),
+\end{equation}
+\noindent
+where $\delta a^*(t)$ and $\langle a \rangle^*$ are just the complex conjugates. To clarify the dynamics of the effects of the radiation pressure force on the mirror displacement, we need to represent the equations of motion in the Fourier domain, $\mathcal{F}[\delta a(t)]$ and $\mathcal{F}[\delta x(t)]$, which is basically the same as solving the differential equations \eqref{eq:a_fluc} and \eqref{eq:x_fluc}
+
+\begin{align}
+\delta a(\Omega)\left(\frac{\kappa}{2} + i(\Delta - \Omega)\right) = -iG\delta x(\Omega) \langle a \rangle \\
+\frac{1}{m}\left( \delta F_{th}(\Omega) + \delta F_{rad}(\Omega) \right) = -\Omega^2\delta x(\Omega) - i\gamma\Omega\delta x(\Omega) + \Omega_m^2\delta x(\Omega).
+\end{align}
+\noindent
+Taking a second look at the fluctuating part of the radiation pressure force in the Fourier domain,
+
+\begin{equation}
+\begin{split}
+\delta F_{rad}(\Omega) & = -\frac{G}{\omega_c}(\langle a \rangle\delta a^*(\Omega) + \langle a \rangle^*\delta a(\Omega)) \\
+ & = \frac{G^2 \langle U_{circ} \rangle}{\omega_c}(A_+(\Omega) + A_-(\Omega))\delta x(\Omega),
+ \label{eq:rad_force_fluc}
+\end{split}
+\end{equation}
+\noindent
+where $A_{\pm}(\Omega) \equiv \frac{\pm i}{\frac{\kappa}{2} \mp i(\Delta - \Omega)}$ is denoted as the strength of the generated sidebands of the intra-cavity field at $\pm\Omega$ by the moving mirror.
+
+We see that the radiation pressure force fluctuations in equation \eqref{eq:rad_force_fluc} depends on the static radiation pressure force $\langle \delta F_{rad} \rangle = -\frac{G}{\omega_c}\langle U_{circ} \rangle$, the cavity frequency fluctuations $G\delta x(\Omega)$ driven by the moving mirror and $(A_+(\Omega) + A_-(\Omega))$ being the dynamic response of the intra-cavity energy to resonance fluctuations. An important note is that the response term contains an imaginary component related to the finite build-up time of the cavity field, as a consequence  $\delta F_{rad}(\Omega)$ will have components both oscillating in phase with the mirror position $\propto \delta x(\Omega)$ {\it and} mirror velocity $\propto [\delta \dot{x}](\Omega)$. We call these effects the optical spring $k_{opt}$ and optical damping $\Gamma_{opt}$, because of the analogy to their classical counter parts.
+
+We then express the newly introduced effect of the radiation pressure force fluctuations on the dynamics of the mirror motion by defining an effective mechanical susceptibility $\chi_{eff}(\Omega) \equiv \frac{\delta x(\Omega)}{\delta F_{th}(\Omega)}$;
+
+\begin{equation}
+\begin{split}
+\chi_{eff}^{-1}(\Omega) & = m(-\Omega^2 -i\Gamma_m\Omega + \Omega_m^2) - \frac{\delta F_{rad}}{\delta x(\Omega)} \\
+ & = m(-\Omega^2 + (\Delta\Omega_{opt}(\Omega) + \Omega_m)^2 -i\Omega(\Gamma_m + \Gamma_{opt}(\Omega))),
+\end{split}
+\end{equation}
+\noindent
+where $\Delta\Omega_{opt}(\Omega) = k_{opt}(\Omega)/(2m\Omega_m)$ is the effect of the optical spring shift on the mechanical frequency, i.e. hardening or softening of the spring. Our optically induced effects become
+
+\begin{equation}
+k_{opt}(\Omega) \equiv -\operatorname{Re}\left[{\frac{\delta F_{rad}(\Omega)}{\delta x (\Omega)}}\right],
+\end{equation}
+\noindent
+and
+\begin{equation}
+\Gamma_{opt}(\Omega) \equiv -\operatorname{Im}\left[{\frac{\delta F_{rad}(\Omega)}{\delta x (\Omega)}}\right]\frac{1}{m\Omega}.
+\end{equation}
+\noindent
+If we assume sufficiently weak laser drive and  radiation pressure force, i.e. $\kappa \gg G,\Gamma_{eff}$, where $\Gamma_{eff} = \Gamma_m + \Gamma_{opt}$ is  the effective damping rate, we can approximate the optically induced effects in the unperturbed oscillation frequency as $\chi_{eff}^{-1}(\Omega = \Omega_m)$, because it is the only Fourier component which gives a contribution in this limit.
+
+\begin{equation}
+\Delta\Omega_{opt}(\Omega_m) = \frac{1}{2m\Omega_m}\frac{G^2\langle U_{circ} \rangle}{\omega_c}\left( \frac{\Delta - \Omega_m}{\left(\frac{\kappa}{2}\right)^2 + (\Delta - \Omega_m)^2} + \frac{\Delta + \Omega_m}{\left(\frac{\kappa}{2}\right)^2 + (\Delta + \Omega_m)^2} \right)
+\end{equation}
+
+\begin{equation}
+\Gamma_{opt}(\Omega_m) = \frac{\kappa}{2m\Omega_m}\frac{G^2\langle U_{circ} \rangle}{\omega_c}\left( \frac{1}{\left(\frac{\kappa}{2}\right)^2 + (\Delta + \Omega_m)^2} - \frac{1}{\left(\frac{\kappa}{2}\right)^2 + (\Delta - \Omega_m)^2} \right).
+\label{eq:gamma_opt}
+\end{equation}
+\noindent
+An easy way to inspect the equations above is by choosing a detuning from our cavity resonance $\Delta \approx \pm \Omega_m$, since the equations simplify greatly in this limit. For positive detuning $\Delta \approx \Omega_m$, i.e. blue detuning, we get a positive optically induced frequency shift and a negative damping contribution to the effective damping coefficient. If the effective damping becomes negative, it leads to an instability in the system. But if we red detune by $\Delta \approx -\Omega_m$, things get more interesting, in partiular that we get an positive optically induced damping contribution and a negative frequency shift. This is known as cooling by dynamical backaction\footnote{Previously called the Braginsky effect.} of the mechanical mode. In other words $\Gamma_{opt}(\Omega)$ is the rate of transfer of mechanical energy into electromagnetic energy. One question quickly jumps to ones mind: by how much can we cool the mechanical mode? To answer this we shall write out the modified power spectral density for the thermal fluctuations and integrate over it to obtain an effective temperature $T_{eff}$;
+
+\begin{equation}
+S_{xx}(\Omega) = \left| \chi_{eff}(\Omega) \right|^2S_{FF}(\Omega).
+\end{equation}
+\noindent
+We can from this expression derive the effective temperature of the reduced mechanical vibrational energy
+%If we dissipate mechanical energy into the eletromagnectic energy faster than thermal excitation from the coupled thermal bath $\Gamma_{m} < \Gamma_{opt}$ it leads to optical cooling, by reducing the mechanical vibrational energy
+
+\begin{equation}
+T_{eff} = \frac{m_{eff}}{k_B}\Omega_m^2\int_0^\infty \frac{d\Omega}{2\pi}S_{xx}(\Omega) \approx \frac{\Gamma_m}{\Gamma_m + \Gamma_{opt}}T_{bath}.
+\end{equation}
+\noindent
+Since $\Gamma_{opt}$ can get arbitrary large, due to $\langle U_{circ} \rangle$ we can seemingly cool all the way to $T_{eff} \approx 0$ or a zero phonon occupancy. End of story, right? Well, not exactly! As we will show later, in the quantum picture, there are limits to how well we can cool. In this model we did not for example take into account fluctuations in the input field. What we just derived is know as dynamical backaction, i.e. fluctuations in the intra-cavity field caused by fluctuation of the mechanical oscillator.
